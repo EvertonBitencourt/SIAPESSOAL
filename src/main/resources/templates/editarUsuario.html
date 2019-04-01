@@ -28,32 +28,42 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<![endif]-->
 </head>
 
-	<body>
+<body>
+	<div class="form_description">
+		<H2>Cadastro de Usuário</H2>
+	</div>
+	<form id="form_user" class="appnitro" method="get" th:action="@{/save}" th:object="${user}">
 		<div class="form_description">
-			<H2>Lista de Usuário</H2>
+			<h3>Edição de usuários no sistema</h3>
 		</div>
-		<form class="">
-		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th>ID </th>
-					<th>Nome </th>
-					<th>Usuario </th>
-					<th>Senha </th>
-					<th>Ação </th>
-				</tr>
-			</thead>	
-			<tbody>
-				<tr th:each= "user: ${users}">
-					<td th:text="${user.id}"></td>
-					<td th:text="${user.nome}"></td>
-					<td th:text="${user.usuario}"></td>
-					<td th:text="${user.senha}"></td>
-					<td><a href='#'>Excluir</a>|<a th:href="@{|/editarUsuario/${user.id}|}">Editar</a></td>
-				</tr>
-			</tbody>
-		</table>	
-		<br /><a href="#" th:href="@{/novoUsuario}">Novo</a>
-		</form>
-	</body>
+		<ul>	
+			<input id="user_id" name="id" type="hidden" value="" th:field="*{id}"/>
+				
+				<li id="li_nome">
+					<Label class="description" for="user_nome">Nome
+					</Label>
+					<div>
+						<input id="user_nome" th:field="*{nome}" class="element text medium" type="text"
+						maxlength="255" />
+					</div>
+					<Label class="description" for="user_usuario">Usuário
+					</Label>
+					<div>
+						<input id="user_usuario" th:field="*{usuario}" class="element text medium" type="text"
+						maxlength="255" />
+					</div>
+					<Label class="description" for="user_senha">Senha
+					</Label>
+					<div>
+						<input id="user_senha" th:field="*{senha}" class="element text medium" type="text"
+						maxlength="255" />
+					</div>
+					<div>
+					<input type="submit" value="Salvar"/>
+					</div>
+				</li>
+			
+		</ul>
+	</form>
+</body>
 </html>

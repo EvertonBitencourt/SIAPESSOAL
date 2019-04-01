@@ -1,6 +1,6 @@
 insert into user(id, nome, usuario, senha) 
-values (1, 'everton','userteste','senhateste');
+values (1001, 'everton','userteste','senhateste');
 insert into user(id, nome, usuario, senha) 
-values (2, 'fernando','baandeiras','senhateste');
+values (1002, 'fernando','baandeiras','senhateste');
 insert into user(id, nome, usuario, senha) 
-values (3, 'Andressa','jojob','senhateste');
+values (1003, 'Andressa','jojob','senhateste');

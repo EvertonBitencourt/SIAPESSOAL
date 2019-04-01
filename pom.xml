@@ -6,7 +6,7 @@
 	
 	<groupId>br.com.siapessoal</groupId>
 	<artifactId>demo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1.0</version>
 	<packaging>jar</packaging>
 	<name>siapessoal2</name>
 	<description>Projeto pessoal de um sistema gerenciador de cursos da educação profissional</description>

@@ -32,19 +32,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="form_description">
 		<H2>Cadastro de Usuário</H2>
 	</div>
-	<form id="form_user" class="appnitro" method="post" th:action="@{/save}" th:object="${user}">
+	<form id="form_user" class="appnitro" method="get" th:action="@{/save}" th:object="${user}">
 		<div class="form_description">
 			<h3>Inclusão de novos usuários no sistema</h3>
 		</div>
 		<ul>	
-			<input id="user_id" name="user_id" type="hidden" value="" th:field="*{id}"/>
+			<input id="user_id" name="id" type="hidden" value="" th:field="*{id}"/>
 				
 				<li id="li_nome">
-					<Label class="descripition" for="element_1">Nome
+					<Label class="description" for="user_nome">Nome
 					</Label>
 					<div>
-						<input id="user_nome" name="user_nome" class="element text medium" type="text"
+						<input id="user_nome" name="nome" class="element text medium" type="text"
 						maxlength="255" value=""/>
+					</div>
+					<Label class="description" for="user_usuario">Usuário
+					</Label>
+					<div>
+						<input id="user_usuario" name="usuario" class="element text medium" type="text"
+						maxlength="255" value=""/>
+					</div>
+					<Label class="description" for="user_senha">Senha
+					</Label>
+					<div>
+						<input id="user_senha" name="senha" class="element text medium" type="text"
+						maxlength="255" value=""/>
+					</div>
+					<div>
+					<input type="submit" value="Cadastrar"/>
 					</div>
 				</li>
 			

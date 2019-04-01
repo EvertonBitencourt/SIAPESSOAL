@@ -1,0 +1,6 @@
+git status - checar modificações comparando com commit
+git add . - adiciona todos arquivos modificados para commit
+git commit -m "mensagem" - registra os arquivos como nova versão para envio
+git push origin master - envia para o servidor
+git pull - atualizar arquivos localmente com os do servidor
+git commit --amend - altera último commit, editando a última versão do commit
