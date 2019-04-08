@@ -15,7 +15,7 @@ public class User {
 	//private Enum cargo;
 	private String usuario;
 	private String senha;
-	//private boolean estado;
+	private boolean ativo;
 	
 	public User() {
 	}
@@ -24,7 +24,7 @@ public class User {
 		this.nome = nome;
 		this.usuario = usuario;
 		this.senha = senha;
-		//estado = true;
+		ativo = true;
 	}
 
 	public Long getId() {
@@ -59,12 +59,12 @@ public class User {
 		this.senha = senha;
 	}
 
-	/*public boolean isEstado() {
-		return estado;
+	public boolean isEstado() {
+		return ativo;
 	}
 
 	public void setEstado(boolean estado) {
-		this.estado = estado;
-	}*/
+		this.ativo = estado;
+	}
 	
 }
